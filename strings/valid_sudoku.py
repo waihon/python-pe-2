@@ -21,9 +21,7 @@ def valid_sudoku(sudoku: list) -> bool:
     
     # Each column of the board must contain all digits from 1 to 9
     for col_index in range(9):
-        col = []
-        for row_index in range(9):
-            col.append(sudoku[row_index][col_index])
+        col = [ sudoku[row_index][col_index] for row_index in range(9) ]
         sorted_col = "".join(sorted(col))
         if sorted_col != SORTED_DIGITS:
             return False
@@ -33,10 +31,8 @@ def valid_sudoku(sudoku: list) -> bool:
     offsets: list = [0, 3, 6]
     for row_offset in offsets:
         for col_offset in offsets:
-            sub_square = []            
-            for row in range(3):
-                for col in range(3):
-                    sub_square.append(sudoku[row+row_offset][col+col_offset])
+            sub_square = [ sudoku[row+row_offset][col+col_offset] \
+                for col in range(3) for row in range(3) ]
         sorted_sub_square = "".join(sorted(sub_square))
         if sorted_sub_square != SORTED_DIGITS:
             return False
