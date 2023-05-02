@@ -20,3 +20,11 @@ if __name__ == "__main__":
     print(stack_object.pop()) # 3
     print(stack_object.pop()) # 2
     print(stack_object.pop()) # 1
+    
+    stack_object_1 = Stack()
+    stack_object_2 = Stack()
+
+    stack_object_1.push(3)
+    stack_object_2.push(stack_object_1.pop())
+
+    print(stack_object_2.pop()) # 3
