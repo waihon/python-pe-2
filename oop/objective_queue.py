@@ -11,11 +11,11 @@ class Queue:
 
     def get(self):
         # get() should remove the elements from the end of the list
-        if self.__queue == []:
-            raise QueueError        
-        val = self.__queue[-1]
+        if len(self.__queue) == 0:
+            raise QueueError
+        elem = self.__queue[-1]
         del self.__queue[-1]
-        return val
+        return elem
 
 if __name__ == "__main__":
     que = Queue()
