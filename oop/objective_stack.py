@@ -11,6 +11,7 @@ class Stack:
         return val
 
 if __name__ == "__main__":
+    # Single stack
     stack_object = Stack()
     
     stack_object.push(1)
@@ -21,6 +22,7 @@ if __name__ == "__main__":
     print(stack_object.pop()) # 2
     print(stack_object.pop()) # 1
     
+    # Multiple stacks
     stack_object_1 = Stack()
     stack_object_2 = Stack()
 
@@ -28,3 +30,14 @@ if __name__ == "__main__":
     stack_object_2.push(stack_object_1.pop())
 
     print(stack_object_2.pop()) # 3
+
+    # Juggle the stacks
+    little_stack = Stack()
+    another_stack = Stack()
+    funny_stack = Stack()
+
+    little_stack.push(1)
+    another_stack.push(little_stack.pop() + 1)
+    funny_stack.push(another_stack.pop() - 2)
+
+    print(funny_stack.pop()) # 0
