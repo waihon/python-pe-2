@@ -72,7 +72,7 @@ if __name__ == "__main__":
 
     print(funny_stack.pop()) # 0
 
-    # Adding Stack object
+    # Init and use AddingStack object
     stack_object = AddingStack()
 
     for i in range(5):
@@ -81,3 +81,11 @@ if __name__ == "__main__":
 
     for i in range(5):
         print(stack_object.pop()) # 4 3 2 1 0
+
+    # Init and use CountingStack object
+    stk = CountingStack()
+    for i in range(100):
+        stk.push(i)
+        stk.pop()
+        continue
+    print(stk.get_counter()) # 100
