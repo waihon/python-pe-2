@@ -27,6 +27,19 @@ class AddingStack(Stack):
     def get_sum(self):
         return self.__sum
 
+class CountingStack(Stack):
+    def __init__(self):
+        Stack.__init__(self)
+        self.pop_count = 0        
+
+    def get_counter(self):
+        return self.pop_count
+
+    def pop(self):
+        val = Stack.pop(self)
+        self.pop_count += 1
+        return val
+
 if __name__ == "__main__":
     # Single stack
     stack_object = Stack()
