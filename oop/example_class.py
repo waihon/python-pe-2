@@ -1,8 +1,8 @@
 class ExampleClass:
-    counter = 0
+    __counter = 0
     def __init__(self, val = 1):
         self.__first = val
-        ExampleClass.counter += 1
+        ExampleClass.__counter += 1
 
     def set_second(self, val):
         self.__second = val
@@ -16,9 +16,9 @@ if __name__ == "__main__":
     example_object_3 = ExampleClass(4)
     example_object_3.__third = 5
 
-    print(example_object_1.__dict__, example_object_1.counter)
+    print(example_object_1.__dict__, example_object_1._ExampleClass__counter)
     # {'_ExampleClass__first': 1} 3
-    print(example_object_2.__dict__, example_object_2.counter)
+    print(example_object_2.__dict__, example_object_2._ExampleClass__counter)
     # {'_ExampleClass__first': 2, '_ExampleClass__second': 3} 3
-    print(example_object_3.__dict__, example_object_3.counter)
+    print(example_object_3.__dict__, example_object_3._ExampleClass__counter)
     # {'_ExampleClass__first': 4, '__third': 5} 3
