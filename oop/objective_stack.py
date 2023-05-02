@@ -10,6 +10,11 @@ class Stack:
         del self.__stack_list[-1]
         return val
 
+class AddingStack(Stack):
+    def __init__(self):
+        Stack.__init__(self)
+        self.__sum = 0
+
 if __name__ == "__main__":
     # Single stack
     stack_object = Stack()
