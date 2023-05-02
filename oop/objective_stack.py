@@ -19,6 +19,11 @@ class AddingStack(Stack):
         self.__sum += val
         Stack.push(self, val)
 
+    def pop(self):
+        val = Stack.pop(self)
+        self.__sum -= val
+        return val
+
 if __name__ == "__main__":
     # Single stack
     stack_object = Stack()
