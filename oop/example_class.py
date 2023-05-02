@@ -37,3 +37,8 @@ if __name__ == "__main__":
         print('a:', example_object.a) # a: 1
     if hasattr(example_object, 'b'):
         print('b:', example_object.b)
+
+    print(hasattr(example_object, 'a'))     # True
+    print(hasattr(example_object, 'varia')) # True
+    print(hasattr(ExampleClass, 'a'))       # False
+    print(hasattr(ExampleClass, 'varia'))   # True
