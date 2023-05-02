@@ -23,6 +23,9 @@ class AddingStack(Stack):
         val = Stack.pop(self)
         self.__sum -= val
         return val
+    
+    def get_sum(self):
+        return self.__sum
 
 if __name__ == "__main__":
     # Single stack
