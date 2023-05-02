@@ -58,3 +58,13 @@ if __name__ == "__main__":
     funny_stack.push(another_stack.pop() - 2)
 
     print(funny_stack.pop()) # 0
+
+    # Adding Stack object
+    stack_object = AddingStack()
+
+    for i in range(5):
+        stack_object.push(i)
+    print(stack_object.get_sum()) # 10
+
+    for i in range(5):
+        print(stack_object.pop()) # 4 3 2 1 0
