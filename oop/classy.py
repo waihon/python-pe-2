@@ -2,9 +2,13 @@ class Classy:
     varia = 2
     def method(self, parm):
         print("method: ", parm)
+        self.other() # other
 
     def print_vars(self):
         print(self.varia, self.var)        
+
+    def other(self):
+        print("other")
 
 if __name__ == "__main__":
     obj = Classy()
