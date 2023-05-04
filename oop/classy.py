@@ -1,6 +1,6 @@
 class Classy:
     varia = 2
-    def __init__(self, value):
+    def __init__(self, value=None):
         self.var = value
     
     def method(self, parm):
@@ -21,3 +21,6 @@ if __name__ == "__main__":
     obj.method(2)    # method: 2
     obj.method(3)    # method: 3
     obj.print_vars() # 2 3\nother
+
+    obj_2 = Classy()
+    print(obj_2.var) # None
