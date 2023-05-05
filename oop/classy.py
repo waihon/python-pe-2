@@ -37,3 +37,19 @@ if __name__ == "__main__":
     except:
         print("failed")    # failed
     obj._Classy__hidden()  # hidden
+
+    print(obj.__dict__) # {'var': 3}
+    print(Classy.__dict__)
+    """
+    '__module__': '__main__',
+    'varia': 2,
+    '__init__': <function Classy.__init__ at 0x10ce2dee0>,
+    'method': <function Classy.method at 0x10ce2ddc0>,
+    'print_vars': <function Classy.print_vars at 0x10ce2df70>,
+    'other': <function Classy.other at 0x10ce2dca0>,
+    'visible': <function Classy.visible at 0x10ce2de50>,
+    '_Classy__hidden': <function Classy.__hidden at 0x10ce64310>,
+    '__dict__': <attribute '__dict__' of 'Classy' objects>,
+    '__weakref__': <attribute '__weakref__' of 'Classy' objects>,
+    '__doc__': None}    
+    """
