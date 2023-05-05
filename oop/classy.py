@@ -57,3 +57,6 @@ if __name__ == "__main__":
     print(Classy.__name__)     # Classy
     obj = Classy()
     print(type(obj).__name__)  # Classy
+
+    print(Classy.__module__)   # __main__
+    print(obj.__module__)      # __main__
