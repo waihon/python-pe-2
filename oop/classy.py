@@ -4,11 +4,11 @@ class Classy:
         self.var = value
     
     def method(self, parm):
-        print("method: ", parm)
+        print("method:", parm)
 
     def print_vars(self):
         print(self.varia, self.var)
-        self.other() # other        
+        self.other()           # other        
 
     def other(self):
         print("other")
@@ -21,24 +21,24 @@ class Classy:
 
 if __name__ == "__main__":
     obj = Classy("object")
-    print(obj.var)         # object    
+    print(obj.var)             # object
     obj.var = 3
-    obj.method(1)          # method: 1
-    obj.method(2)          # method: 2
-    obj.method(3)          # method: 3
-    obj.print_vars()       # 2 3\nother
+    obj.method(1)              # method: 1
+    obj.method(2)              # method: 2
+    obj.method(3)              # method: 3
+    obj.print_vars()           # 2 3\nother
 
     obj_2 = Classy()
-    print(obj_2.var)       # None
+    print(obj_2.var)           # None
 
-    obj.visible()          # visible  
+    obj.visible()              # visible  
     try:
         obj.__hidden()
     except:
-        print("failed")    # failed
-    obj._Classy__hidden()  # hidden
+        print("failed")        # failed
+    obj._Classy__hidden()      # hidden
 
-    print(obj.__dict__) # {'var': 3}
+    print(obj.__dict__)        # {'var': 3}
     print(Classy.__dict__)
     """
     '__module__': '__main__',
@@ -53,3 +53,7 @@ if __name__ == "__main__":
     '__weakref__': <attribute '__weakref__' of 'Classy' objects>,
     '__doc__': None}    
     """
+
+    print(Classy.__name__)     # Classy
+    obj = Classy()
+    print(type(obj).__name__)  # Classy
