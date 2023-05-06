@@ -5,19 +5,21 @@ class Point:
         self.__x = x
         self.__y = y
 
-    def get_x(self):
+    @property
+    def x(self):
         return self.__x
 
-    def get_y(self):
+    @property
+    def y(self):
         return self.__y
 
     def distance_from_xy(self, x, y):
-        dx = x - self.get_x()
-        dy = y - self.get_y()
+        dx = x - self.x
+        dy = y - self.y
         return hypot(dx, dy)
 
     def distance_from_point(self, point):
-        return self.distance_from_xy(point.get_x(), point.get_y())
+        return self.distance_from_xy(point.x, point.y)
 
 if __name__ == "__main__":
     point1 = Point(0, 0)
