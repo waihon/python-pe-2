@@ -3,6 +3,9 @@ class Star:
         self.name = name
         self.galaxy = galaxy
 
+    def __str__(self):
+        return self.name + ' in ' + self.galaxy
+
 if __name__ == "__main__":
     sun = Star("Sun", "Milky Way")
-    print(sun) # <__main__.Star object at 0x7f038befe310>
+    print(sun) # Sun in Milky Way
