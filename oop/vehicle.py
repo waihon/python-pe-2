@@ -13,7 +13,11 @@ class LandVehicle(Vehicle):
 
 
 class TrackedVehicle(LandVehicle):
-    pass
+    def control_track(left, stop):
+        pass
+
+    def change_direction(left, on):
+        control_track(left, on)
 
 
 if __name__ == "__main__":
