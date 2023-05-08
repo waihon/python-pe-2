@@ -20,6 +20,14 @@ class TrackedVehicle(LandVehicle):
         control_track(left, on)
 
 
+class WheeledVehicle(LandVehicle):
+    def turn_front_wheels(left, on):
+        pass
+
+    def change_direction(left, on):
+        turn_front_wheels(left, on)
+
+        
 if __name__ == "__main__":
     for cls1 in [Vehicle, LandVehicle, TrackedVehicle]:
         for cls2 in [Vehicle, LandVehicle, TrackedVehicle]:
