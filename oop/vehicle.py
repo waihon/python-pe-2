@@ -3,7 +3,13 @@ class Vehicle:
 
 
 class LandVehicle(Vehicle):
-    pass
+    def change_direction(left, on):
+        pass
+
+    def turn(left):
+        change_direction(left, True)
+        time.sleep(0.25)
+        change_direction(left, False)
 
 
 class TrackedVehicle(LandVehicle):
